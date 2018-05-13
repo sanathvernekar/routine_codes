@@ -1,2 +1,2 @@
 # routine_codes
-about day to day codes and few algorithms implemented.
+They are all about my day to day codes and few algorithms implemented.
