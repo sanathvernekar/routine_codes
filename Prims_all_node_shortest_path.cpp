@@ -38,6 +38,8 @@ int main() {
 				adjacency_matrix[y-1][x-1] = r;
 			}
 		} else {	
+
+			
 			adjacency_matrix[x-1][y-1] = r;
 			adjacency_matrix[y-1][x-1] = r;
 		}

@@ -80,6 +80,7 @@ void dijkstra(vector<map<int,int>>& adjacency_list, int src, int N)
             // current path (distance) from src
             if(!determined[av] && (dist[mdv] + weight) < dist[av]) {
                 dist[av] = dist[mdv] + weight;
+
             }
         }
      }
