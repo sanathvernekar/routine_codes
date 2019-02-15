@@ -15,11 +15,13 @@ long long int smallest_prime(long long int n){
 int main()
  {
 	int t;
-	cin>>t;
+	//cin>>t;
+	t=1;
 	while(t--)
 	    {
 	        long long int n;
-	        cin>>n;
+			n=586;
+	        //cin>>n;
 	        for(long long int i=1;i<=n;i++){
 	            cout<<smallest_prime(i)<<" ";
 	        }

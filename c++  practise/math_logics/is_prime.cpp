@@ -30,6 +30,16 @@ bool is_prime(int n) {
     return true;
 }
 
+bool is_prime(long long int n){
+	if(n==1)return false;
+	long long int i=2;
+		while(i*i<=n){
+			if(n%i==0)return false;
+			i+=1;
+		}
+	return true;
+	}
+
 int main()
 {
     int n, k =3,num;
