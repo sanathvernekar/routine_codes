@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<iostream.h>
 using namespace std;
 #define mod 1000000007
 #define ll long long int 
@@ -24,6 +23,7 @@ int main()
 	factorial[0]=1;
 	factorial[1]=1;
 	ll t;
+	cin>>t;
 	while(t--){
 	ll n;
 	cin>>n;
