@@ -5,7 +5,7 @@ vector<int> dijkstra(int n,int source, vector<pair<int, int> > G[]) {
     int INF = (int)1e9;
     vector<int> D(n, INF);
     D[source] = 0;
-    set<pair<int, int> > Q;
+    set<pair<int, int> > Q;//alternative for priority queue
     Q.insert({0,source});
     while(!Q.empty())   {
         auto top = Q.begin();
@@ -14,7 +14,7 @@ vector<int> dijkstra(int n,int source, vector<pair<int, int> > G[]) {
         for(auto next: G[u])    {
             int v = next.first, weight = next.second;
             if( D[u] + weight < D[v] ) {
-                if(Q.find( {D[v],v})!=Q.end())
+                if(Q.find( {D[v],v})!=Q.end())//check if the pair is  present in the priority queue
                     Q.erase(Q.find( {D[v], v} ));
                 D[v] = D[u] + weight;
                 Q.insert( {D[v], v} );
