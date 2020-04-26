@@ -35,43 +35,26 @@ ll a[100001];
 int binarySearch(int low,int high,int key)
 {
     //for sorted arrays
+	//Ascending order 
    while(low<=high)
    {
      int mid=(low+high)/2;
-     if(a[mid]<key)
-     {
-         low=mid+1;
-     }
-     else if(a[mid]>key)
-     {
-         high=mid-1;
-     }
-     else
-     {
-         return mid;
-     }
+     if(a[mid]<key)low=mid+1;
+     else if(a[mid]>key)high=mid-1;
+     else return mid;
    }
    return -1; 
  }
  int revBinarySearch(int low,int high,int key)
 {
     // for reverse sorted arrays 
+	//Descending order 
    while(low<=high)
    {
      int mid=(low+high)/2;
-     if(a[mid]<key)
-     {
-        high=mid-1;   
-     }
-     else if(a[mid]>key)
-     {
-         low=mid+1;
-         
-     }
-     else
-     {
-         return mid;
-     }
+     if(a[mid]<key)high=mid-1;   
+     else if(a[mid]>key)low=mid+1;
+     else return mid;
    }
    return -1; 
  }
