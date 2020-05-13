@@ -1,4 +1,3 @@
-/*-------------------- Author : Sanath Vernekar  --------------------*/ 
 #include <iostream>
 #include<bits/stdc++.h>
 #include <algorithm>
@@ -33,22 +32,36 @@ using namespace std;
 #define tc int t; cin >> t; while(t--)
 #define arrInp(a,n) for (int i=0;i<n;i++) cin >> a[i]
 
-
+ll binpow(ll a, ll b){
+    a=a%mod;
+    ll res=1;
+    while(b>0){
+        if(b & 1 )(res=res*a)%mod;
+        a=(a*a)%mod;
+        b >>= 1;
+    }
+    return res;
+}
+long long binpower(long long a, long long b) {
+    long long res = 1;
+    while (b > 0) {
+        if (b & 1)
+            res = res * a;
+        a = a * a;
+        b >>= 1;
+    }
+    return res;
+}
 
 int main()
 {
+	FIO;
 	tc{
-		int n;
-		int result=0;
-		cin>>n;
-		vector<int > a(n,0);
-		arrInp(a,n);
-		
-	
-	
-	cout<<result<<endl;
+	    ll a,b;
+	    cin>>a>>b;
+	    cout<<binpow(a,b)<<endl;
+	    cout<<binpower(a,b)<<endl;
 	}
-
 
 
 return 0;
